@@ -23,6 +23,7 @@
 
 .Content {
   display: flex;
+  
 }
 
 .SideBar {
@@ -44,14 +45,29 @@
 
 .MainPage {
   display: flex;
+  margin: 50px;
   gap: 50px;
   text-align: center;
+  
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+  background-color: blueviolet;
+  border-radius: 10px;
 }
 
 .Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: brown;
 }
 
 .git--hub {
   height: 100px;
+  
 }
