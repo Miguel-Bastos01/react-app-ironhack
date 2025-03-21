@@ -60,15 +60,16 @@ function App() {
       "dueDate": "2023-09-30"
     }
   ]
+  const toDoList = list.filter((status) => status.status === "To Do");
+  const inProgressList = list.filter((status) => status.status === "In Progress");
+  const doneList = list.filter((status) => status.status === "Done");
 
-  const [cards, setCards] = useState(list)
+  const [toDoCards, setToDoCards] = useState(toDoList)
+  const [inProgCards, setInProgCards] = useState(inProgressList)
+  const [doneCards, setDoneCards] = useState(doneList)
 
   
-  const toDoList = cards.filter((status) => status.status === "To do");
-  const inProgressList = cards.filter((status) => status.status === "In Progress");
-  const doneList = cards.filter((status) => status.status === "Done");
   
-
   return (
     <div className='App'>
       <div className='NavBar'>
@@ -79,7 +80,7 @@ function App() {
           <SideBar />
         </div>
         <div className='MainPage'>
-          <MainPage list = {cards} />
+          <MainPage toDoList = {toDoCards} inProgList = {inProgCards} doneList = {doneCards} />
         </div>
       </div>
       <div className='Footer'>
