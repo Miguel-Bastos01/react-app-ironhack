@@ -1,11 +1,11 @@
 import { TaskItem } from './TaskItem';
 
-export function TaskList({ myCards }) {
+export function TaskList({ deleteItem, myCards }) {
   return (
     <ol>
       {myCards.map( (item) => {
         return (
-          <TaskItem item={item} />
+          <TaskItem deleteItem={deleteItem} item={item} />
         )
       })}
     </ol>

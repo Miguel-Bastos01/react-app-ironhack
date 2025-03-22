@@ -1,41 +1,33 @@
-import {TaskList} from "./TaskList";
 
-export function MainPage({toDoList, inProgList, doneList}) {
+import { useState } from "react";
+import { TaskList } from "./TaskList";
 
-    // const deleteItem = () => {
-    //     const copyList = [...list];
-    //     copyList.pop();
-    //     setCards(copyList);
-    //   }
-    
-    //   const addItem = () => {
-    //     const copyList = [...list];
-    //     const newItem = {};
-    //     copyList.push(newItem);
-    //     setCards(copyList);
-    //   }
-
-
+export function MainPage({ deleteItem, cards}) {
+  const toDoList = cards.filter((card) => card.status === "To Do");
+  const inProgressList = cards.filter((card) => card.status === "In Progress");
+  const doneList = cards.filter((card) => card.status === "Done");
+  const [toDoCards, setToDoCards] = useState(toDoList)
+  const [inProgCards, setInProgCards] = useState(inProgressList)
+  const [doneCards, setDoneCards] = useState(doneList)
     return (
         <div className="MainPage">
             <div className="toDoColumn column">
-            {toDoList.length} tasks to do:
-                <TaskList myCards={toDoList}/>
+                {toDoCards.length} tasks to do:
+                <TaskList deleteItem={deleteItem} myCards={toDoCards} />
                 <button>Add a card</button>
-                <button>Remove a card</button>
             </div>
             <div className="inProgColumn column">
-            {inProgList.length} tasks in progress:
-            <TaskList myCards={inProgList}/>
+                {inProgCards.length} tasks in progress:
+                <TaskList deleteItem={deleteItem} myCards={inProgCards} />
                 <button>Add a card</button>
-                <button>Remove a card</button>
             </div>
             <div className="doneColumn column">
-            {doneList.length} tasks done:
-            <TaskList myCards={doneList}/>
+                {doneCards.length} tasks done:
+                <TaskList deleteItem={deleteItem} myCards={doneCards} />
                 <button>Add a card</button>
-                <button>Remove a card</button>
             </div>
         </div>
     )
+
+    
 }
