@@ -11,10 +11,8 @@ function App() {
   const [cards, setCards] = useState(list)
   
   const deleteItem = (id) => {
-    console.log("I'm running")
           const copyList = structuredClone(cards);
           const filter = copyList.filter((todo) => todo.id !== id);
-          console.log(filter)
           setCards(filter);
       } 
   
@@ -29,7 +27,6 @@ function App() {
         </div>
         <div className='MainPage'>
           <MainPage deleteItem={deleteItem} cards={cards} />
-          
         </div>
       </div>
       <div className='Footer'>
