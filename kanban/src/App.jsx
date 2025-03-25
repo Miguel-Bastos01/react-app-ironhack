@@ -5,6 +5,7 @@ import { SideBar } from './components/SideBar';
 import { MainPage } from './components/MainPage';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
+import { Dashboard } from './pages/Dashboard';
 import { About } from './pages/About';
 import { Route, Routes } from "react-router-dom";
 import list from "./assets/list.json"
@@ -30,7 +31,8 @@ function App() {
         </div>
         <div className='MainPage'>
           <Routes>
-            <Route path="/" element={<Home cards={cards} deleteItem={deleteItem} />} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/dashboard" element={<Dashboard cards={cards} deleteItem={deleteItem} />} />
             <Route path="/about" element={<About />} />
           </Routes>
          
