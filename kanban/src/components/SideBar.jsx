@@ -1,8 +1,16 @@
+import { Link } from 'react-router-dom';
+
 export function SideBar() {
     return (
-        <>
-            <a href="#" className="home--link">Home</a>
-            <a href="#" className="about--link">About</a>
-        </>
+        <nav>
+            <ul>
+                <li>
+                    <Link to="/" className="home--link">Home</Link>
+                </li>
+                <li>
+                    <Link to="/about" className="about--link">About</Link>
+                </li>
+            </ul>
+        </nav>
     )
 }

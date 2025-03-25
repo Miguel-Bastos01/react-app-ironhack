@@ -10,7 +10,7 @@ export function TaskList({ type, deleteItem, myCards }) {
     <ol>
       {cards.map( (item) => {
         return (
-          <TaskItem deleteItem={deleteItem} item={item} />
+          <TaskItem key={item.id} deleteItem={deleteItem} item={item} />
         )
       })}
     </ol>
