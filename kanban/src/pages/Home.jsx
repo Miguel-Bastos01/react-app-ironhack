@@ -1,6 +1,6 @@
 export function Home() {
     return(
-        <div>
+        <div className="HomePageBorder">
             <h1 className="title">Home Page</h1>
             <p className="text">Welcome to Miguel and Luke's KanBan.</p>
             <hr /> 

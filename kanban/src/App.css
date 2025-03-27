@@ -100,3 +100,18 @@
   font-weight: 700;
   color: black;
 }
+
+.HomePageBorder{
+  border: solid black 1px;
+  box-shadow: 10px 10px 10px gray;
+}
+
+.AboutPage{
+  border: solid black 1px;
+  box-shadow: 10px 10px 10px gray;
+}
+
+.DashBoardBorder{
+  border: solid black 1px;
+  box-shadow: 10px 10px 10px gray;
+}

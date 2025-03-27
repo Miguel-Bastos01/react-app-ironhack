@@ -20,6 +20,22 @@ function App() {
     setCards(filter);
   }
 
+  const addTask = (e) => {
+    e.preventDefault();
+    const tasksCopy = [...tasks];
+    tasksCopy.push({
+      "title": title,
+      "priority": priority,
+      "deadline": deadline,
+      "status": To-Do
+    });
+    setTasks[tasksCopy];
+  }
+
+  const [title, setTitle] = useState("");
+  const [priority, setPriority] = useState("Medium");
+  const [deadline, setDeadline] = useState("");
+
   return (
     <div className='App'>
       <div className='NavBar'>
@@ -32,7 +48,7 @@ function App() {
         <div className='MainPage'>
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/dashboard" element={<Dashboard cards={cards} deleteItem={deleteItem} />} />
+            <Route path="/dashboard" element={<Dashboard cards={cards} deleteItem={deleteItem} setCards={setCards}/>} />
             <Route path="/about" element={<About />} />
           </Routes>
          
