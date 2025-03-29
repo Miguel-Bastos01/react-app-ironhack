@@ -6,7 +6,7 @@ export function TaskList({ type, deleteItem, myCards }) {
 
   return (
     <>
-      <h3>{type}: {cards.length}</h3>
+      <h3 className="ColumnTitle">{type}: {cards.length}</h3>
     <ol>
       {cards.map( (item) => {
         return (

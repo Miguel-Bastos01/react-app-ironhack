@@ -8,9 +8,17 @@
   justify-content:flex-start;
   align-items: center;
   gap: 10px;
-  background-image: url("Background-test.jpg");
 
 }
+
+.header-background{
+  display: inline-block;
+  position: relative;
+  left: 15%;
+  height: 120px;
+  width: 50px;
+}
+
 
 .kanban--logo {
   height: 100px;
@@ -114,4 +122,89 @@
 .DashBoardBorder{
   border: solid black 1px;
   box-shadow: 10px 10px 10px gray;
+}
+
+.ShowForm{
+background-color: aqua;
+
+
+} 
+
+.ShowFormButton{
+  border: none
+}
+
+.RemoveButton{
+  background-color: white;
+  padding: 5%;
+  border-radius: 10000px;
+  font-weight: bold;
+}
+
+
+.ColumnTitle{
+  color: white;
+}
+
+.TaskItem{
+  color: white;
+}
+
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  background-color: white;
+  border-radius: 5px;
+  padding: 2rem;
+  width: 30em;
+}
+
+.btn {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px #ccc;
+  font-size: 1rem;
+}
+
+.btn-submit{
+  background-color: rgb(5, 193, 5);
+  color: white;
+} 
+
+.btn-cancel{
+  background-color: #d9534f;
+  color: white;
+}
+
+.close{
+  cursor: pointer;
+  color: black;
+}
+
+.modal-header{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+
+.modal-content{
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.modal-footer{
+  display: flex;
+  justify-content: space-evenly;
 }
