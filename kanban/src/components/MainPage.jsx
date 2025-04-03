@@ -4,7 +4,7 @@ import { TaskList } from "./TaskList";
 import { Modal } from './Modal';
 import { AddACard } from './AddACard';
 
-export function MainPage({ setCards, deleteItem, cards }) {
+export function MainPage({showForm, setShowForm, addTask, taskName, setTaskName, taskDescription, setTaskDescription, deadline, setDeadline, priority, setPriority, status, setStatus, setCards, deleteItem, cards }) {
 
     return (
         <>
@@ -20,10 +20,8 @@ export function MainPage({ setCards, deleteItem, cards }) {
             </div>
            
         </div>
-        <div className='ShowForm'>
-            <AddACard setCards={setCards} cards={cards} />
-            {/* <Modal/> */}
-        </div>
+            {/* <AddACard setCards={setCards} cards={cards} /> */}
+            <Modal addTask={addTask} showForm={showForm} setShowForm={setShowForm} setCards={setCards} cards={cards} taskName={taskName} setTaskName={setTaskName} taskDescription={setTaskDescription} deadline={deadline} setDeadline={setDeadline} priority={priority} setPriority={setPriority} status={status} setStatus={setStatus}/>
         </>
         
     )

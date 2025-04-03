@@ -7,14 +7,15 @@ export function TaskList({ type, deleteItem, myCards }) {
   return (
     <>
       <h3 className="ColumnTitle">{type}: {cards.length}</h3>
-    <ol>
-      {cards.map( (item) => {
-        return (
-          <TaskItem key={item.id} deleteItem={deleteItem} item={item} />
-        )
-      })}
-    </ol>
+      <hr />
+      <ul>
+        {cards.map((item) => {
+          return (
+            <TaskItem key={item.id} deleteItem={deleteItem} item={item} />
+          )
+        })}
+      </ul>
     </>
-  
+
   )
 }

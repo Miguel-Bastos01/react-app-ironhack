@@ -126,19 +126,18 @@
 
 .ShowForm{
 background-color: aqua;
-
-
 } 
 
 .ShowFormButton{
-  border: none
+  border: none;
 }
 
 .RemoveButton{
-  background-color: white;
-  padding: 5%;
-  border-radius: 10000px;
-  font-weight: bold;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: flex-end;
 }
 
 
@@ -148,6 +147,10 @@ background-color: aqua;
 
 .TaskItem{
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 200px;
 }
 
 .modal-container {
@@ -163,6 +166,8 @@ background-color: aqua;
 }
 
 .modal {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 5px;
   padding: 2rem;
@@ -188,14 +193,9 @@ background-color: aqua;
   color: white;
 }
 
-.close{
-  cursor: pointer;
-  color: black;
-}
-
 .modal-header{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   font-size: 2rem;
 }
 

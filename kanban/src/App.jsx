@@ -7,11 +7,14 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Dashboard } from './pages/Dashboard';
 import { About } from './pages/About';
+import { ErrorPage } from './pages/errorPage';
 import { Route, Routes } from "react-router-dom";
+import {v4 as uuidv4} from "uuid";
 import list from "./assets/list.json"
 
 
-function App() {
+function App() {  
+
   const [cards, setCards] = useState(list)
 
   const deleteItem = (id) => {
@@ -20,21 +23,11 @@ function App() {
     setCards(filter);
   }
 
-  const addTask = (e) => {
-    e.preventDefault();
-    const tasksCopy = [...tasks];
-    tasksCopy.push({
-      "title": title,
-      "priority": priority,
-      "deadline": deadline,
-      "status": To-Do
-    });
-    setTasks[tasksCopy];
+  const addTask = (task) => {
+    const tasksCopy = structuredClone(cards);
+    tasksCopy.push(task);
+    setCards(tasksCopy);
   }
-
-  const [title, setTitle] = useState("");
-  const [priority, setPriority] = useState("Medium");
-  const [deadline, setDeadline] = useState("");
 
   return (
     <div className='App'>
@@ -48,8 +41,9 @@ function App() {
         <div className='MainPage'>
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/dashboard" element={<Dashboard cards={cards} deleteItem={deleteItem} setCards={setCards}/>} />
+            <Route path="/dashboard" element={<Dashboard addTask={addTask} cards={cards} deleteItem={deleteItem} setCards={setCards}/>} />
             <Route path="/about" element={<About />} />
+            <Route path="/404NotFound" element={<ErrorPage/>}/>
           </Routes>
          
         </div>

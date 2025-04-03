@@ -15,7 +15,7 @@ const [status, setStatus] = useState("To Do");
     tasksCopy.push({
       title: title,
       priority: priority,
-    deadline: deadline,
+      deadline: deadline,
       status: status,
       id: uuidv4()
 
