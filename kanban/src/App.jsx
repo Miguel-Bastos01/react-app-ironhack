@@ -43,7 +43,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/dashboard" element={<Dashboard addTask={addTask} cards={cards} deleteItem={deleteItem} setCards={setCards}/>} />
             <Route path="/about" element={<About />} />
-            <Route path="/404NotFound" element={<ErrorPage/>}/>
+            <Route path="*" element={<ErrorPage/>}/>
           </Routes>
          
         </div>

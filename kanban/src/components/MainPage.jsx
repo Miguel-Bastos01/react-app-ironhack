@@ -12,9 +12,11 @@ export function MainPage({showForm, setShowForm, addTask, taskName, setTaskName,
             <div className="toDoColumn column">
                 <TaskList type="To Do" deleteItem={deleteItem} myCards={cards} />
             </div>
+            <div></div>
             <div className="inProgColumn column">
                 <TaskList type="In Progress" deleteItem={deleteItem} myCards={cards} />
             </div>
+            <div></div>
             <div className="doneColumn column">
                 <TaskList type="Done" deleteItem={deleteItem} myCards={cards} />
             </div>

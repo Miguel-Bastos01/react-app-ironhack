@@ -1,5 +1,15 @@
+body{
+
+
+  
+}
+
 .App{
+  display: grid;
   font-family: sans-serif;
+  grid-template-rows:auto 1fr auto;
+  margin: 0;
+  min-height: 100vh;
 }
 
 .NavBar {
@@ -30,7 +40,8 @@
 }
 
 .Content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr ;
   
 }
 
@@ -52,31 +63,39 @@
 }
 
 .MainPage {
-  display: flex;
-  margin: 50px;
-  gap: 50px;
-  text-align: center;
-  
+ /* text-align: center;
+ display: grid;
+ grid-template-columns: 1fr auto;
+   */
+
+   display: flex;
+   text-align: center;
+   justify-content: space-evenly;
+
+
+   
 }
 
 .column {
   display: flex;
   justify-content: center;
+  padding: 100px;
   flex-direction: column;
   font-weight: bold;
-  background-color: blueviolet;
   border-radius: 10px;
 }
 
 .Footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: brown;
+  display: flex ;
+  justify-content: flex-start;
+  min-height: 100px;
+ 
 }
 
 .git--hub {
+ 
   height: 100px; 
+  
 }
 
 .nav {
@@ -109,20 +128,14 @@
   color: black;
 }
 
-.HomePageBorder{
-  border: solid black 1px;
-  box-shadow: 10px 10px 10px gray;
-}
+
 
 .AboutPage{
   border: solid black 1px;
   box-shadow: 10px 10px 10px gray;
 }
 
-.DashBoardBorder{
-  border: solid black 1px;
-  box-shadow: 10px 10px 10px gray;
-}
+
 
 .ShowForm{
 background-color: aqua;
@@ -142,11 +155,11 @@ background-color: aqua;
 
 
 .ColumnTitle{
-  color: white;
+  color:black;
 }
 
 .TaskItem{
-  color: white;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -207,4 +220,24 @@ background-color: aqua;
 .modal-footer{
   display: flex;
   justify-content: space-evenly;
+}
+
+.error-container{
+  display: flex;
+  background-color: #F2F2F2;
+}
+
+.error-text{
+  padding-left: 100px;
+  width: 250px;
+}
+
+.error-text > h1{
+  font-size: 5rem;
+  padding-top: 50px;
+}
+
+.error-img > img{
+  width: 250px;
+  padding: none;
 }
