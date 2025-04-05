@@ -1,79 +1,69 @@
 body{
-
-
-  
+  margin: 0;
 }
 
-.App{
+.App {
   display: grid;
   font-family: sans-serif;
-  grid-template-rows:auto 1fr auto;
-  margin: 0;
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 
 .NavBar {
   display: flex;
   flex-direction: row;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
-
+  color: white;
+  font-size: xx-large;
+  background-color: #093A3E;
+  padding-left: 100px;
 }
-
-.header-background{
-  display: inline-block;
-  position: relative;
-  left: 15%;
-  height: 120px;
-  width: 50px;
-}
-
 
 .kanban--logo {
   height: 100px;
   width: 100px;
 }
 
-.title {
+.homepage-title {
   font-size: 5rem;
+  color: #093A3E;
+}
+
+.homepage-text {
+  color: #093A3E;
 }
 
 .Content {
   display: grid;
-  grid-template-columns: auto 1fr ;
-  
+  grid-template-columns: auto 1fr;
+
 }
 
 .SideBar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 160px;
-  background-color: aquamarine;
+  justify-content: space-around;
+  width: 300px;
+  background-image: url("Images/Background-sidebar.png") ;
 }
 
-.SideBar > a {
+.SideBar>a {
   margin-top: 50px;
   margin-bottom: 50px;
+  width: 100px;
   text-align: center;
-  color: black;
+  color: #093A3E;
   background-color: white;
-  width: 50px;
 }
 
+
 .MainPage {
- /* text-align: center;
- display: grid;
- grid-template-columns: 1fr auto;
-   */
-
-   display: flex;
-   text-align: center;
-   justify-content: space-evenly;
-
-
-   
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
 }
 
 .column {
@@ -83,19 +73,18 @@ body{
   flex-direction: column;
   font-weight: bold;
   border-radius: 10px;
+  min-height: 200px
 }
 
 .Footer {
-  display: flex ;
-  justify-content: flex-start;
   min-height: 100px;
- 
+  background-color: #093A3E;
 }
 
 .git--hub {
- 
-  height: 100px; 
-  
+
+  height: 100px;
+
 }
 
 .nav {
@@ -113,39 +102,29 @@ body{
   border-radius: 10000px;
 }
 
-.home--link {
-  font-weight: 700;
-  color: black;
-}
-
-.dashboard--link {
-  font-weight: 700;
-  color: black;
-}
-
-.about--link {
-  font-weight: 700;
-  color: black;
+.sidebar-link {
+  font-weight: 800;
+  color: #093A3E;
 }
 
 
 
-.AboutPage{
+.AboutPage {
   border: solid black 1px;
   box-shadow: 10px 10px 10px gray;
 }
 
 
 
-.ShowForm{
-background-color: aqua;
-} 
+.ShowForm {
+  background-color: aqua;
+}
 
-.ShowFormButton{
+.ShowFormButton {
   border: none;
 }
 
-.RemoveButton{
+.RemoveButton {
   background-color: inherit;
   display: flex;
   flex-direction: column;
@@ -154,11 +133,11 @@ background-color: aqua;
 }
 
 
-.ColumnTitle{
-  color:black;
+.ColumnTitle {
+  color: black;
 }
 
-.TaskItem{
+.TaskItem {
   color: black;
   display: flex;
   justify-content: space-between;
@@ -181,10 +160,11 @@ background-color: aqua;
 .modal {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #093A3E;
   border-radius: 5px;
   padding: 2rem;
   width: 30em;
+  border: solid 2px white;
 }
 
 .btn {
@@ -192,52 +172,84 @@ background-color: aqua;
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0px 5px 5px #ccc;
   font-size: 1rem;
 }
 
-.btn-submit{
-  background-color: rgb(5, 193, 5);
-  color: white;
-} 
-
-.btn-cancel{
-  background-color: #d9534f;
-  color: white;
+.btn-submit {
+  background-color: white;
+  color: #093A3E;
+  font-weight: bold;
 }
 
-.modal-header{
+.btn-cancel {
+  background-color: white;
+  color: #093A3E;
+  font-weight: bold;
+
+}
+
+.modal-header {
   display: flex;
   justify-content: center;
   font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  color: white;
 }
 
-.modal-content{
+.modal-content {
   margin-bottom: 2rem;
   color: black;
 }
 
-.modal-footer{
+.modal-footer {
   display: flex;
   justify-content: space-evenly;
 }
 
-.error-container{
+.error-container {
   display: flex;
   background-color: #F2F2F2;
 }
 
-.error-text{
+.error-text {
   padding-left: 100px;
   width: 250px;
 }
 
-.error-text > h1{
+.error-text>h1 {
   font-size: 5rem;
   padding-top: 50px;
 }
 
-.error-img > img{
+.error-img>img {
   width: 250px;
   padding: none;
+}
+
+.modal-mb {
+  margin-bottom: 20px;
+}
+
+.modal-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal-title {
+  color: white;
+  font-size: large;
+}
+
+.modal-option {
+  font-family: sans-serif;
+  text-align: center;
+  color: #093A3E;
+}
+
+.columns{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -5,15 +5,17 @@ export function SideBar() {
         <nav>
             <ul className='nav'>
                 <li>
-                    <Link to="/" className="home--link">Home</Link>
+                    <Link to="/" className="sidebar-link">Home</Link>
                 </li>
                 <li>
-                    <Link to="/dashboard" className="dashboard--link">Dashboard</Link>
+                    <Link to="/dashboard" className="sidebar-link">Dashboard</Link>
                 </li>
                 <li>
-                    <Link to="/about" className="about--link">About</Link>
+                    <Link to="/about" className="sidebar-link">About</Link>
                 </li>
+                
             </ul>
+            
         </nav>
     )
 }
