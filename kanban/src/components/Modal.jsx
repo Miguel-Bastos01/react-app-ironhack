@@ -30,7 +30,7 @@ export const Modal = ({ addTask }) => {
 
     return (
         <>
-            <button onClick={() => setShowForm(!showForm)}>{showForm ? "Hide form" : "Add a card"}</button>
+            <button className="add-a-card" onClick={() => setShowForm(!showForm)}>{showForm ? "Hide form" : "Add a card"}</button>
             {showForm && <form onSubmit={handleSubmit} className="modal-container">
                 <div className="modal">
                     <span className="modal-header">Add Task</span>

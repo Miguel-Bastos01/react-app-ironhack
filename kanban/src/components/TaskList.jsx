@@ -10,9 +10,6 @@ export function TaskList({ type, deleteItem, myCards }) {
       </h3>
       <div className="columns">
         <div className="row">
-          <hr />
-        </div>
-        <div className="row">
           <ul>
             {cards.map((item) => {
               return (

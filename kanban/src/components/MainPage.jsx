@@ -8,7 +8,6 @@ export function MainPage({ addTask, deleteItem, cards, setCards }) {
     return (
         <>
             <div className="MainPage">
-            <h3 className="ColumnTitle">To Do: {cards.length}</h3>
                 <div className="toDoColumn column">
                     <TaskList type="To Do" deleteItem={deleteItem} myCards={cards} />
                 </div>
