@@ -4,9 +4,6 @@ export function TaskItem({ deleteItem, item }) {
   return (
     <>
       <li className="TaskItem" key={item.id}>
-        <button className="RemoveButton" onClick={() => deleteItem(item.id)}>
-          🔧
-        </button>
         <Link to={`/dashboard/${item.id}`} key={item.id}>
           {item.title}
         </Link>

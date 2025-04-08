@@ -123,8 +123,12 @@ body{
 
 
 .AboutPage {
-  border: solid black 1px;
-  box-shadow: 10px 10px 10px gray;
+  display: flex;
+}
+
+.AboutPage>h1{
+  font-size: 5rem;
+  color: #093A3E;
 }
 
 
@@ -223,6 +227,9 @@ body{
 
 .error-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   background-color: #F2F2F2;
 }
 
@@ -233,10 +240,10 @@ body{
 
 .error-text>h1 {
   font-size: 5rem;
-  padding-top: 50px;
+  margin-top: 0;
 }
 
-.error-img>img {
+.error-img {
   width: 250px;
   padding: none;
 }
@@ -263,5 +270,9 @@ body{
 
 .dashboard-title{
   color: #093A3E;
-  font-size: xx-large;
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.single-task-list{
 }
