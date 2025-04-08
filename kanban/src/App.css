@@ -6,6 +6,7 @@ body{
   display: grid;
   font-family: sans-serif;
   grid-template-rows: auto 1fr auto;
+  width: 100vw;
   min-height: 100vh;
 }
 
@@ -80,7 +81,7 @@ body{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 100px;
+  padding: 0 50px;
   flex-direction: column;
   font-weight: bold;
   border-radius: 10px;
@@ -115,12 +116,14 @@ body{
   border-radius: 10000px;
 }
 
+.navbar-title{
+  font-size: 3rem;
+}
+
 .sidebar-link {
   font-weight: 800;
   color: #093A3E;
 }
-
-
 
 .AboutPage {
   display: flex;
