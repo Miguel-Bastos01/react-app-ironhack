@@ -9,6 +9,7 @@ import { Dashboard } from './pages/Dashboard';
 import { About } from './pages/About';
 import { ErrorPage } from './pages/errorPage';
 import { SingleTask } from './pages/SingleTask'
+import { EditSingleTask } from './pages/EditSingleTask';
 import { Route, Routes } from "react-router-dom";
 import {v4 as uuidv4} from "uuid";
 import list from "./assets/list.json"
@@ -44,6 +45,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/dashboard" element={<Dashboard addTask={addTask} cards={cards} deleteItem={deleteItem} setCards={setCards}/>} />
             <Route path="/dashboard/:taskId" element={<SingleTask cards={cards}/>}/>
+            <Route path="/dashboard/:taskId/edit" element={<EditSingleTask addTask={addTask} cards={cards}/>}/>
             <Route path="/about" element={<About />} />
             <Route path="*" element={<ErrorPage/>}/>
           </Routes>

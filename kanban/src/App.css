@@ -300,3 +300,17 @@ body{
 .task-name{
   width: 460.8px;
 }
+
+.edit-btn{
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #093A3E;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-top: 18%;
+}
