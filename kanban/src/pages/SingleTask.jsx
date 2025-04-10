@@ -1,8 +1,11 @@
+import { useParams } from "react-router-dom"
+import { useState } from "react"
+
 export function SingleTask({ cards }) {
 
-  const myCard = cards.filter((card) => card.id === card.id);
-  console.log(myCard)
+  const { taskId } = useParams()
 
+  const myCard = cards.filter((card) => card.id === taskId);
 
   return (
     <>
@@ -14,6 +17,7 @@ export function SingleTask({ cards }) {
 
               <td className="single-task-info">
                 <input
+                  className="input task-name"
                   name="taskName"
                   type="text"
                   placeholder="Task Name"
@@ -28,7 +32,8 @@ export function SingleTask({ cards }) {
               <td className="single-task-info">
                 <label>
                   <textarea
-                    rows="4"
+                    className="textarea"
+                    rows="3"
                     cols="60"
                     name="taskDescription"
                     type="text"
@@ -44,11 +49,11 @@ export function SingleTask({ cards }) {
 
               <td className="single-task-info">
                 <label>
-                  <select name="status" value={item.status}>
-                    <option value="">-- None --</option>
-                    <option value="To Do">To do</option>
-                    <option value="In Progress">In Progress</option>
-                    <option value="Done">Done</option>
+                  <select className="input" name="status" value={item.status}>
+                    <option className="modal-option" value="">-- None --</option>
+                    <option className="modal-option" value="To Do">To do</option>
+                    <option className="modal-option" value="In Progress">In Progress</option>
+                    <option className="modal-option" value="Done">Done</option>
                   </select>
                 </label>
               </td>
@@ -59,7 +64,7 @@ export function SingleTask({ cards }) {
 
               <td className="single-task-info">
                 <label>
-                  <select name="priority" value={item.priority}>
+                  <select className="input" name="priority" value={item.priority}>
                     <option className="modal-option" value="">
                       -- None --
                     </option>
@@ -81,6 +86,7 @@ export function SingleTask({ cards }) {
               <td className="single-task-info">
                 <label>
                   <input
+                    className="input"
                     name="deadline"
                     type="date"
                     value={item.dueDate}

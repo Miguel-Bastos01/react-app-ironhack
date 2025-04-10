@@ -23,8 +23,8 @@ body{
 }
 
 .kanban--logo {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 .homepage-title {
@@ -277,5 +277,26 @@ body{
   margin-bottom: 0;
 }
 
+.single-task-row, .single-task-header, .single-task-info{
+  border: solid white;
+  border-radius: 10px;
+  color: white;
+  background-color: #093A3E;
+}
+
 .single-task-list{
+  margin: 10px 0;
+}
+
+.textarea, .input{
+  border-radius: 5px;
+}
+
+.single-task-info{
+  height: 80px;
+  padding: 0 10px;
+}
+
+.task-name{
+  width: 460.8px;
 }
