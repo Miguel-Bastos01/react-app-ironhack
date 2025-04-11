@@ -45,7 +45,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/dashboard" element={<Dashboard addTask={addTask} cards={cards} deleteItem={deleteItem} setCards={setCards}/>} />
             <Route path="/dashboard/:taskId" element={<SingleTask cards={cards}/>}/>
-            <Route path="/dashboard/:taskId/edit" element={<EditSingleTask addTask={addTask} cards={cards}/>}/>
+            <Route path="/dashboard/:taskId/edit" element={<EditSingleTask cards={cards} setCards={setCards} deleteItem={deleteItem}/>}/>
             <Route path="/about" element={<About />} />
             <Route path="*" element={<ErrorPage/>}/>
           </Routes>

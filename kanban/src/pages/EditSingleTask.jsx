@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useParams, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-export function EditSingleTask({ cards, addTask }) {
+export function EditSingleTask({ cards, setCards, deleteItem }) {
   const { taskId } = useParams();
   const [showForm, setShowForm] = useState(false);
 
@@ -10,16 +10,23 @@ export function EditSingleTask({ cards, addTask }) {
     e.preventDefault();
 
     const newTask = {
-      title: taskName,
-      description: taskDescription,
+      title: name,
+      description: description,
       priority: priority,
-      deadline: deadline,
+      deadline: date,
       status: status,
       id: uuidv4(),
     };
     addTask(newTask);
     setShowForm(!showForm);
   };
+
+  const addTask = (task) => {
+    const tasksCopy = structuredClone(myCard);
+    tasksCopy.push(task);
+    setCards(tasksCopy);
+  };
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("");
@@ -30,11 +37,14 @@ export function EditSingleTask({ cards, addTask }) {
 
   return (
     <>
-      <button className="a" onClick={() => setShowForm(!showForm)}>
-        {showForm
-          ? "Don't bother clicking me"
-          : "Are you sure you want to edit the task? If you do, then you'll need to update everything again - don't fuck it up"}
-      </button>
+      
+        <button className="a" onClick={() => setShowForm(!showForm)}>
+          {showForm
+            ? "Dunno how to get rid of this... Snozzles!"
+            : "Are you sure you want to edit the task? If you do, then you'll need to update everything again - don't fuck it up"}
+        </button>
+      
+
       {showForm && (
         <form onSubmit={handleSubmit}>
           {myCard.map((item) => {
@@ -161,8 +171,16 @@ export function EditSingleTask({ cards, addTask }) {
               </>
             );
           })}
-                                  <button className="btn btn-submit" type="submit">Update Task</button>
-                                  <button className="btn btn-cancel" type="button" onClick={() => setShowForm(!showForm)}>Cancel</button>
+          <button className="btn btn-submit" type="submit">
+            Update Task
+          </button>
+          <button
+            className="btn btn-cancel"
+            type="button"
+            onClick={() => setShowForm(!showForm)}
+          >
+            Cancel
+          </button>
         </form>
       )}
     </>

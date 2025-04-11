@@ -145,7 +145,7 @@ body{
 }
 
 .RemoveButton {
-  background-color: inherit;
+  background-color: #093A3E;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
@@ -158,7 +158,9 @@ body{
 }
 
 .TaskItem {
-  color: black;
+  background-color: #093A3E;
+  border-radius: 10px;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -313,4 +315,10 @@ body{
   align-items: center;
   height: 50px;
   margin-top: 18%;
+}
+
+.card{
+  color: #F2F2F2;
+  padding: 10px;
+  border-radius: 10px;
 }

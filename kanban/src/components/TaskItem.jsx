@@ -4,7 +4,7 @@ export function TaskItem({ deleteItem, item }) {
   return (
     <>
       <li className="TaskItem" key={item.id}>
-        <Link to={`/dashboard/${item.id}`} key={item.id}>
+        <Link className="card" to={`/dashboard/${item.id}`} key={item.id}>
           {item.title}
         </Link>
         {/* { item.status === "To Do" ? '❌' : item.status === "In Progress" ? '⏳': '✅'} <br /> } */}
