@@ -8,7 +8,7 @@ export function Home() {
             <hr /> 
             <p>Click on the 'Dashboard' button in the sidebar to go to your KanBan.</p>
             <hr /> 
-            <p>Click on the 'About' button in the sidebar to find out about the developers.</p>
+            <p>Click on the 'About' button in the sidebar to find out about the project.</p>
         </div>
     )
 }

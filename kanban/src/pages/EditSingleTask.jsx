@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 
 export function EditSingleTask({ cards, setCards, deleteItem }) {
   const { taskId } = useParams();
-  const [showForm, setShowForm] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +17,6 @@ export function EditSingleTask({ cards, setCards, deleteItem }) {
       id: uuidv4(),
     };
     addTask(newTask);
-    setShowForm(!showForm);
   };
 
   const addTask = (task) => {
@@ -38,14 +36,6 @@ export function EditSingleTask({ cards, setCards, deleteItem }) {
   return (
     <>
       
-        <button className="a" onClick={() => setShowForm(!showForm)}>
-          {showForm
-            ? "Dunno how to get rid of this... Snozzles!"
-            : "Are you sure you want to edit the task? If you do, then you'll need to update everything again - don't fuck it up"}
-        </button>
-      
-
-      {showForm && (
         <form onSubmit={handleSubmit}>
           {myCard.map((item) => {
             return (
@@ -182,7 +172,7 @@ export function EditSingleTask({ cards, setCards, deleteItem }) {
             Cancel
           </button>
         </form>
-      )}
+      
     </>
   );
 }

@@ -127,6 +127,7 @@ body{
 
 .AboutPage {
   display: flex;
+  flex-direction: column;
 }
 
 .AboutPage>h1{
@@ -315,6 +316,20 @@ body{
   align-items: center;
   height: 50px;
   margin-top: 18%;
+}
+
+.edit-btn:hover + .hide{
+  display: block;
+}
+
+.hide{
+  display: none;
+  color: #093A3E;
+  font-weight: bold;
+  border-radius: 5px;
+  border: #093A3E solid 3px;
+  background-color: white;
+  padding: 10px;
 }
 
 .card{

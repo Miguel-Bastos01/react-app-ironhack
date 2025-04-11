@@ -6,6 +6,10 @@ export function SingleTask({ cards }) {
 
   const myCard = cards.filter((card) => card.id === taskId);
 
+  function alertFunction() {
+    alert("Are you sure you want to edit the task? If you do, then you'll need to update everything again - don't fuck it up")
+  }
+
   return (
     <>
       {myCard.map((item) => {
@@ -107,9 +111,9 @@ export function SingleTask({ cards }) {
                 </td>
               </tr>
             </table>
-            <Link to={`/dashboard/${item.id}/edit`} key={item.id} className="edit-btn">
+              <Link onClick={alertFunction} to={`/dashboard/${item.id}/edit`} key={item.id} className="edit-btn">
               Edit your task
-            </Link>
+              </Link>
           </>
         
         );
