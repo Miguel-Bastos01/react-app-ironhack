@@ -1,9 +1,10 @@
-import { useParams, Route, Routes } from "react-router-dom";
+import { useParams, Route, Routes, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export function EditSingleTask({ cards, setCards, deleteItem }) {
   const { taskId } = useParams();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +18,7 @@ export function EditSingleTask({ cards, setCards, deleteItem }) {
       id: uuidv4(),
     };
     addTask(newTask);
+    navigate("/dashboard")
   };
 
   const addTask = (task) => {
@@ -164,13 +166,11 @@ export function EditSingleTask({ cards, setCards, deleteItem }) {
           <button className="btn btn-submit" type="submit">
             Update Task
           </button>
-          <button
-            className="btn btn-cancel"
-            type="button"
-            onClick={() => setShowForm(!showForm)}
+          <Link to="/dashboard" className="btn btn-cancel"
+
           >
             Cancel
-          </button>
+          </Link>
         </form>
       
     </>
